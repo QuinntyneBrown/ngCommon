@@ -1,0 +1,4 @@
+angular.module("common").run(["$templateCache", function ($templateCache) {
+    $templateCache.put("/app/common/components/identityMenu/identityMenu.html", "<div id=\"core-identity-menu\">" + "" + "    <ul class=\"menu-bar\" data-ng-if=\"!session.isLoggedIn()\">" + "" + "        <li><a href=\"#/signin\">SIGN IN</a></li>" + "" + "        <li><a href=\"#/register\">REGISTER</a></li>" + "" + "    </ul>" + "" + "    <ul class=\"menu-bar\" data-ng-if=\"session.isLoggedIn()\">" + "" + "        <li><a class=\"link\" href=\"#/security\">ADMIN</a></li>" + "" + "        <li><a class=\"link\" href=\"#/signin\">SIGN OUT</a></li>" + "        " + "        <li><a>Hi {{ session.getCurrentUser().username }}!</a></li>" + "" + "    </ul>" + "" + "</div>");
+}]);
+//# sourceMappingURL=identityMenu.html.js.map
